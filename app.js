@@ -1,8 +1,33 @@
+// creating pets in object literal for ex 5
+
+const pet1 = {
+  petType: 'dog',
+  age: 10,
+  color: 'brown'
+}
+const pet2 = {
+  petType: 'cat',
+  age: 3,
+  color: 'black'
+}
+const pet3 = {
+  petType: 'bird',
+  age: 1,
+  color: 'yellow'
+}
+
+
 function main()
 {
 // exercise1();
 // exercise2();
- exercise3();
+// exercise3();
+
+// let months =['Jan', 'Feb', 'March', 'Apr', 'May', 'Jun'];
+// exercise4(months, 'Feb');
+// console.log(months);
+
+// exercise5();
 
 
 
@@ -12,18 +37,21 @@ main();
 function exercise1()
 {
   let sentence = prompt("Type a sentence to see it's case changed. Start with all lowercase letters.");
-  let splitArray = [];
+  
   if (sentence === sentence.toLowerCase()) {
   let splitSentence = sentence.split(' ');
-  splitArray.push(splitSentence);
-  for (let i = 0; i < splitArray.length; i++) {
-    if (i%2 == 0){
-  let capsWords = splitArray[i].toUpperCase();
   
-    }
-    console.log(capsWords);
+  for (let i = 0; i < splitSentence.length; i++) {
+    if (i%2 != 0){
+  splitSentence[i] = splitSentence[i].toUpperCase();
   }
   }
+
+  let newSentence = splitSentence.join(' ');
+  console.log(newSentence);
+  }
+  
+
 }
 
 function exercise2(){
@@ -77,6 +105,28 @@ function exercise3_last(array, howmany){
 }
 
 
-function exercise4(){
-
+function exercise4(array, remove){
+    // find where in the array the item to be removed is
+  let deleteIndex = array.indexOf(remove);
+  // if the value is in the array
+if (deleteIndex > -1){
+// delete one item starting at the index of our value to be deleted
+array.splice(deleteIndex,1);
 }
+}
+
+
+function exercise5(){
+  // make mepty array to hold pets
+ let pet_list = [];
+ // push in the pet objects
+ pet_list.push(pet1);
+ pet_list.push(pet2);
+ pet_list.push(pet3);
+ // log the array
+ console.log(pet_list);   
+ }
+
+
+
+
