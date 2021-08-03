@@ -121,3 +121,4 @@ function exercise5() {
   // log the array
   console.log(pet_list);
 }
+// testing git settings
